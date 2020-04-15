@@ -1,0 +1,240 @@
+body {
+  background: #767676 url(../imagens/topo.jpg) no-repeat center 0;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width:720px) {
+  .centralize {
+    width: 720px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+@media screen and (min-width:1100px) {
+  .centralize {
+    width: 1100px;
+  }
+}
+header h1.logo,
+header h2.brasao {
+  display: inline-block;
+  vertical-align: top;
+}
+header h1.logo a,
+header h2.brasao a {
+  display: inline-block;
+  text-indent: -9999px;
+}
+header h1.logo a {
+  width: 230px;
+  height: 30px;
+  background: url(../imagens/logo.png) no-repeat center;
+}
+header h2.brasao {
+  margin-left: 15px;
+  border-left: 1px solid #444444;
+  padding-left: 15px;
+}
+header h2.brasao a {
+  width: 30px;
+  height: 30px;
+  background: url(../imagens/brasao-tjpb.png) no-repeat left;
+}
+@media screen and (min-width:1100px) {
+  header h2.brasao a {
+    width: 185px;
+    transition: 0.7s;
+  }
+}
+header h2.opcoes {
+  font-weight: normal;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 20px;
+}
+@media screen and (min-width:720px) {
+  header h2.opcoes {
+    display: inline-block;
+    width: 55%;
+    text-align: right;
+  }
+}
+header h2.opcoes i {
+  color: #edbe00;
+  margin-right: 5px;
+}
+header h2.opcoes a.submenu {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  display: block;
+  display: inline-block;
+  text-family: 'Roboto', sans-serif;
+  text-decoration: none;
+  margin-right: 7px;
+}
+nav {
+  background-color: #444444;
+  min-height: 42px;
+  color: #edbe00;
+}
+@media screen and (min-width:720px) {
+  nav {
+    position: absolute;
+    top: 230px;
+    width: 100%;
+  }
+}
+nav span.hamburger {
+  display: none;
+}
+@media screen and (max-width:719px) {
+  nav span.hamburger {
+    cursor: pointer;
+    display: block;
+  }
+}
+nav ul {
+  height: 0px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-left: 1px solid #353535;
+}
+@media screen and (min-width:720px) {
+  nav ul {
+    height: auto;
+  }
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 -4px 0 0;
+  border-right: 1px solid #353535;
+  border-left: 1px solid #5e5e5e;
+}
+nav ul li a {
+  text-transform: uppercase;
+  color: #edbe00;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+nav ul li a:hover {
+  background: #edbe00;
+  color: #444444;
+  transition: 0.6s;
+}
+nav ul li:last-child {
+  border-right: 0;
+}
+nav ul.open {
+  height: auto;
+  padding: 10px;
+}
+section.destaques {
+  padding: 15px;
+}
+section.destaques .box {
+  margin-bottom: 15px;
+}
+@media screen and (min-width:720px) {
+  section.destaques .box {
+    width: calc(20% - 15px);
+    margin: 15px 5px;
+    display: inline-block;
+  }
+}
+section.destaques .box a {
+  display: block;
+  padding: 10px;
+  height: 10px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #444444;
+  position: relative;
+}
+@media screen and (min-width:720px) {
+  section.destaques .box a {
+    min-height: 70px;
+    border-bottom: 3px solid #edbe00;
+  }
+}
+section.destaques .box a span {
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 10px;
+  vertical-align: top;
+}
+section.destaques .box a span.icone {
+  background: #edbe00 url(../imagens/icons.png) no-repeat -95px -3px;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  text-indent: -9999px;
+  margin: -10px 0 -10px -10px;
+}
+@media screen and (min-width:720px) {
+  section.destaques .box a span.icone {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    border-radius: 30px;
+  }
+}
+@media screen and (min-width:720px) {
+  section.destaques .box a span.acao {
+    color: #edbe00;
+    text-transform: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+  }
+}
+@media screen and (min-width:720px) {
+  section.destaques .box a span.uc {
+    color: #444444;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+  }
+}
+@media screen and (min-width:720px) {
+  section.destaques .box a span.descricao {
+    color: #444444;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+  }
+}
+section.destaques .box:last-child {
+  margin-bottom: 0;
+}
+section.destaques .box.custas-ocasionais span.icone {
+  background-position: -95px -40px;
+}
+section.destaques .box.custas-recursos span.icone {
+  background-position: -95px -80px;
+}
+section.destaques .box.custas-originarias span.icone {
+  background-position: -95px -117px;
+}
+section.destaques .box.consultar-guia span.icone {
+  background-position: -95px -155px;
+}
+main {
+  background-color: #fff;
+}
+@media screen and (min-width:720px) {
+  main {
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
+/*# sourceMappingURL=css.css.map */

@@ -1,0 +1,231 @@
+@cinza: #767676;
+@cinza-escuro: #444444; //menu e textos
+@amarelo: #edbe00;
+
+@md-min: ~"screen and (min-width:720px)";
+@lg-min: ~"screen and (min-width:1100px)";
+
+@md-max: ~"screen and (max-width:719px)";
+
+@roboto: 'Roboto', sans-serif;
+@condensed: 'Roboto Condensed', sans-serif;
+
+.font(@cor,@transform,@size:12px,@family:@roboto){
+  color: @cor;
+  text-transform: @transform;
+  font-size: @size;
+  font-family: @family;
+  display: block;
+}
+
+body {
+  background: @cinza url(../imagens/topo.jpg) no-repeat center 0;
+  font-family: @roboto;
+  margin: 0;
+  padding: 0;
+}
+
+.centralize {
+  //width:100%
+  @media @md-min {
+    width: 720px;
+    margin: 0 auto;
+    position: relative;
+  }
+  @media @lg-min {
+    width: 1100px;
+  }
+}
+
+header {
+  h1.logo,h2.brasao {
+    display: inline-block;
+    vertical-align: top;
+    a {
+      display: inline-block;
+      text-indent: -9999px;
+    }
+  }
+  h1.logo a {
+    width: 230px;
+    height: 30px;
+    background: url(../imagens/logo.png) no-repeat center;
+  }
+  h2.brasao {
+    margin-left: 15px;
+    border-left: 1px solid @cinza-escuro;
+    padding-left: 15px;
+    a {
+      width: 30px;
+      @media @lg-min {
+        width: 185px;
+        transition: 0.7s;
+      }
+      height: 30px;
+      background: url(../imagens/brasao-tjpb.png) no-repeat left;
+    }
+  }
+  h2.opcoes { 
+  font-weight: normal;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 20px;
+    @media @md-min {
+      display: inline-block;
+      width: 55%;
+      text-align: right;
+    }
+  
+  i {
+    color: @amarelo;
+    margin-right: 5px;  
+  }
+    a.submenu {
+    .font(white,uppercase);
+    display: inline-block;
+    text-family: @roboto;
+    text-decoration: none;
+    margin-right: 7px;
+    }
+  }
+}
+
+nav {
+  background-color: @cinza-escuro;
+  min-height: 42px;
+  color: @amarelo;
+  @media @md-min {
+    position: absolute;
+    top: 230px;
+    width: 100%;
+  }
+  span.hamburger {
+    display: none;
+    @media @md-max{
+      cursor: pointer;
+      display: block;
+    }
+  }
+  ul {
+    height: 0px;
+    @media @md-min {
+      height: auto;
+    }
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid darken(@cinza-escuro, 6%);
+    li {
+      display: inline-block;
+      margin: 0 -4px 0 0;
+      border-right: 1px solid darken(@cinza-escuro, 6%);
+      border-left: 1px solid lighten(@cinza-escuro, 10%);
+      a {
+        text-transform: uppercase;
+        color: @amarelo;
+        text-decoration: none;
+        display: inline-block;
+        padding: 12px 20px;
+        font-family: @condensed;
+        &:hover {
+          background: @amarelo;
+          color: @cinza-escuro;
+          transition: 0.6s;
+        }
+      }
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+  ul.open {
+    height: auto;
+    padding: 10px;
+  }
+
+}
+
+section.destaques {
+  padding: 15px;
+  .box {
+    margin-bottom: 15px;
+    @media @md-min {
+      width: ~"calc(20% - 15px)";
+      margin: 15px 5px;
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 10px;
+      height: 10px;
+      @media @md-min {
+        min-height: 70px;
+        border-bottom: 3px solid @amarelo;
+      }
+      background-color: #fff;
+      text-decoration: none;
+      color: @cinza-escuro;
+      position: relative;
+      span {
+        text-transform: uppercase;
+        font-family: @condensed;
+        font-size: 10px;
+        vertical-align: top;
+        &.icone {
+          background: @amarelo url(../imagens/icons.png) no-repeat -95px -3px;
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          vertical-align: top;
+          text-indent: -9999px;
+          margin: -10px 0 -10px -10px;
+          @media @md-min {
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            border-radius: 30px;
+          }
+        }
+        &.acao {
+          @media @md-min {
+            .font(@amarelo,none,15px);
+          }
+        }
+        &.uc {
+          @media @md-min {
+            .font(@cinza-escuro,uppercase,20px,@condensed);
+          }
+        }
+        &.descricao {
+          @media @md-min {
+            .font(@cinza-escuro,uppercase,12px,@condensed);
+          }
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.custas-ocasionais span.icone {
+      background-position: -95px -40px;
+    }
+    &.custas-recursos span.icone {
+      background-position: -95px -80px;
+    }
+    &.custas-originarias span.icone {
+      background-position: -95px -117px;
+    }
+    &.consultar-guia span.icone {
+      background-position: -95px -155px;
+    }
+  }
+}
+
+main {
+  background-color: #fff;
+  @media @md-min {
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
